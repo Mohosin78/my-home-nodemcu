@@ -43,7 +43,7 @@ window.onload = () => {
         return document.createElement($o);
       };
 
-      console.log(o);
+      console.log(o.json());
 
       pin_array.forEach((o, t) => {
         let n = $dm("li"),
