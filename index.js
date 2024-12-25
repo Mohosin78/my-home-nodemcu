@@ -3,7 +3,7 @@ function toggleLED(_e) {
   console.log(pin_array_state[_e.state])
   let _o = _e.ID,
     $state = pin_array_state[_e.state] == 0 ? 1 : 0;
-console.log(pin_array_state[_e.state])
+
   let _eo = _e.children[1].classList;
   _eo.add("s");
 
@@ -17,7 +17,8 @@ console.log(pin_array_state[_e.state])
         
         _eo.remove("s");
         _eo.toggle("a");
-        _e.state = $state;console.log(_e,_e.state);
+        _e.state = $state;
+        console.log(_e,_e.state,$state);
       }
     })
     .catch((error) => {
