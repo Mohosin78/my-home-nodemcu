@@ -2,7 +2,7 @@ const pin_array=[2,4,5,12,13,14,15,16],pin_array_state=[0,0,0,0,0,0,0,0],pin_det
 function toggleLED(_e) {
   let _o = _e.ID,
     $state = pin_array_state[_e.state] == 0 ? 1 : 0;
-
+alert($state)
   let _eo = _e.children[1].classList;
   _eo.add("s");
 
