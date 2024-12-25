@@ -39,12 +39,13 @@ window.onload = () => {
   fetch("/states")
     .then((o) => {
       if (!o.ok) throw new Error("Network response was not ok");
+      return o.json();
+    })
+    .then((data) => {
       let dm = ($o) => {
         return document.createElement($o);
       };
-
-      console.log(o.json());
-
+      console.log(data)
       pin_array.forEach((o, t) => {
         let n = $dm("li"),
           span = $dm("span"),
