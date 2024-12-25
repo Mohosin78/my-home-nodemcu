@@ -45,6 +45,7 @@ window.onload = () => {
       let dm = ($o) => {
         return document.createElement($o);
       };
+      console.log(3535345)
       pin_array_state = data["state"];
       pin_array.forEach((o, t) => {
         let n = $dm("li"),
@@ -63,6 +64,7 @@ window.onload = () => {
         n.append(div1);
         div1.append(div2);
         document.querySelector("ol").append(n);
+        console.log(3455)
       });
     })
     .catch((e) => {});
