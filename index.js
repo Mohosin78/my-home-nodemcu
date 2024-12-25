@@ -7,6 +7,8 @@ alert($state)
   let _eo = _e.children[1].classList;
   _eo.add("s");
 
+  console.log(_e,_eo,_eo.state)
+
   fetch("/toggle?led=" + _o + "&&state=" + $state)
     .then((response) => {
       if (!response.ok) {
