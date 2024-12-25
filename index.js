@@ -35,7 +35,6 @@ function toggleLED(_e) {
 }
 
 window.onload = () => {
-  const e = document.querySelector("ol");
   fetch("/states")
     .then((o) => {
       if (!o.ok) throw new Error("Network response was not ok");
@@ -62,7 +61,7 @@ window.onload = () => {
           n.append(span),
           n.append(div1),
           div1.append(div2),
-          e.append(n);
+          document.querySelector("ol").append(n);
       });
     })
     .catch((e) => {});
