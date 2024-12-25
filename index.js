@@ -45,7 +45,7 @@ window.onload = () => {
       let dm = ($o) => {
         return document.createElement($o);
       };
-      console.log(data["state"])
+      pin_array_state = data["state"];
       pin_array.forEach((o, t) => {
         let n = $dm("li"),
           span = $dm("span"),
@@ -53,13 +53,15 @@ window.onload = () => {
           div2 = $dm("div");
 
         span.innerText = pin_detail[t] || "NULL";
-        div1.className = "so";
+        div1.className = pin_array_state[t] == 1 ? "so a" : "so";
         div2.className = "si";
 
         (n.ID = o),
           (n.state = t),
           (n.onclick = () => toggleLED(n)),
-          (n.innerHTML = a),
+          n.append(span),
+          n.append(div1),
+          div1.append(div2),
           e.append(n);
       });
     })
