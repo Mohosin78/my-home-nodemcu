@@ -1,13 +1,13 @@
 const pin_array=[2,4,5,12,13,14,15,16],pin_array_state=[0,0,0,0,0,0,0,0],pin_detail=["My Room","Dinning","kitchen","Bathroom","park","Room 3","Stair","Gate"];
 function toggleLED(_e) {
-  alert(_e.state)
+  console.log(pin_array_state[_e.state])
   let _o = _e.ID,
     $state = pin_array_state[_e.state] == 0 ? 1 : 0;
-alert($state)
+console.log(pin_array_state[_e.state])
   let _eo = _e.children[1].classList;
   _eo.add("s");
 
-  console.log(_e,_eo,_eo.state)
+  console.log(_e,_e.state)
 
   fetch("/toggle?led=" + _o + "&&state=" + $state)
     .then((response) => {
