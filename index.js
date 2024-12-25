@@ -41,6 +41,7 @@ window.onload = () => {
       return o.json();
     })
     .then((data) => {
+      alert(343)
       let dm = ($o) => {
         return document.createElement($o);
       };
