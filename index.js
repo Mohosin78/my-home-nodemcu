@@ -45,7 +45,7 @@ window.onload = () => {
       let dm = ($o) => {
         return document.createElement($o);
       };
-      console.log(data[0])
+      console.log(data["state"])
       pin_array.forEach((o, t) => {
         let n = $dm("li"),
           span = $dm("span"),
