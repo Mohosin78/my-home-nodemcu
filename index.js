@@ -55,13 +55,13 @@ window.onload = () => {
         div1.className = pin_array_state[t] == 1 ? "so a" : "so";
         div2.className = "si";
 
-        (n.ID = o),
-          (n.state = t),
-          (n.onclick = () => toggleLED(n)),
-          n.append(span),
-          n.append(div1),
-          div1.append(div2),
-          document.querySelector("ol").append(n);
+        n.ID = o;
+        n.state = t;
+        n.onclick = () => toggleLED(n);
+        n.append(span);
+        n.append(div1);
+        div1.append(div2);
+        document.querySelector("ol").append(n);
       });
     })
     .catch((e) => {});
