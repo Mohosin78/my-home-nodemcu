@@ -14,10 +14,10 @@ alert($state)
       if (!response.ok) {
         throw new Error("Network response was not ok");
       } else {
-        console.log(_e)
+        
         _eo.remove("s");
         _eo.toggle("a");
-        _e.state = $state;
+        _e.state = $state;console.log(_e,_e.state);
       }
     })
     .catch((error) => {
